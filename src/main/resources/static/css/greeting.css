@@ -1,0 +1,45 @@
+.container {
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    color: black;
+     }
+
+h3 {
+    font-family: "Elsie", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rebeccapurple;
+}
+
+.banner {
+    background: linear-gradient(135deg, rgba(252, 141, 211, 0.82), rgba(0, 217, 255, 0.82));
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    font-size: 32px;
+}
+
+.form-card, .result-card {
+    width: 600px;
+    height: 550px;
+    margin: auto;
+}
+.btn-primary, .btn-info{
+    background-color: deepskyblue;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #365899;
+}
+
+.btn-secondary{
+    background-color: deeppink;
+}
+
+.btn-secondary:hover {
+    background-color: rebeccapurple;
+}

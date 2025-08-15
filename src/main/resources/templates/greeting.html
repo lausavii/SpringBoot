@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Greeting Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/greeting.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Elsie:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="banner">
+  <h1>COP 3330 Project 8: Greeting</h1>
+</div>
+
+<div class="container">
+  <div class="card shadow p-4 form-card">
+    <h3 class="mb-4 text-center"><strong><em>Please Enter Your Student ID, Date, and Message:</em></strong></h3>
+    <form th:action="@{/greeting}" th:object="${greeting}" method="post">
+
+      <div class="mb-3 row align-items-center">
+        <label class="col-sm-3 col-form-label">Student ID</label>
+        <div class="col-sm-9">
+          <input type="text" th:field="*{id}" class="form-control" placeholder="Enter your Student ID" required>
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label class="col-sm-3 col-form-label">Month</label>
+        <div class="col-sm-9">
+          <input type="number" th:field="*{month}" min="1" max="12" placeholder="Month" />
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label class="col-sm-3 col-form-label">Day</label>
+        <div class="col-sm-9">
+          <input type="number" th:field="*{day}" min="1" max="31" placeholder="Day" />
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label class="col-sm-3 col-form-label">Year</label>
+        <div class="col-sm-9">
+          <input type="number" th:field="*{year}" min="1900" max="2100" placeholder="Year" />
+        </div>
+      </div>
+
+      <div class="mb-3 row align-items-center">
+        <label class="col-sm-3 col-form-label">Message</label>
+        <div class="col-sm-9">
+          <textarea th:field="*{content}" class="form-control" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <button type="submit" class="btn btn-primary">Enter Data</button>
+        <button type="reset" class="btn btn-secondary">Clear</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
